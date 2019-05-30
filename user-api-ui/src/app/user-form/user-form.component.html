@@ -1,0 +1,83 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="save()" #userForm="ngForm">
+      <!-- <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" [(ngModel)]="user.id" class="form-control" id="id" name="id" placeholder="Enter ID" required
+          #id="ngModel">
+      </div> -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="user.name" class="form-control" id="name" name="name"
+          placeholder="Enter your name" required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" [(ngModel)]="user.username" class="form-control" id="username" name="username"
+          placeholder="Enter your username" required #username="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="user.email" class="form-control" id="email" name="email"
+          placeholder="Enter your email address" required #email="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="streetaddress">Street Address</label>
+        <input type="text" [(ngModel)]="user.address.street" class="form-control" id="streetaddress"
+          name="streetaddress" placeholder="Enter your street address" required #streetaddress="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="streetsuite">Street Suite</label>
+        <input type="text" [(ngModel)]="user.address.suite" class="form-control" id="streetsuite" name="streetsuite"
+          placeholder="Enter your street suite" required #streetsuite="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="streetcity">City</label>
+        <input type="text" [(ngModel)]="user.address.city" class="form-control" id="streetcity" name="streetcity"
+          placeholder="Enter your street city" required #streetcity="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="streetzipcode">Zipcode</label>
+        <input type="text" [(ngModel)]="user.address.zipcode" class="form-control" id="streetzipcode"
+          name="streetzipcode" placeholder="Enter your zipcode" required #streetzipcode="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="geo">Latitude</label>
+        <input type="text" [(ngModel)]="user.address.geo.lat" class="form-control" id="latitude" name="latitude"
+          placeholder="Enter your latitude" required #latitude="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="geo">Longitude</label>
+        <input type="text" [(ngModel)]="user.address.geo.lng" class="form-control" id="longitude" name="longitude"
+          placeholder="Enter your longitude" required #longitude="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" [(ngModel)]="user.phone" class="form-control" id="phone" name="phone"
+          placeholder="Enter your phone number" required #phone="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="text" [(ngModel)]="user.website" class="form-control" id="website" name="website"
+          placeholder="Enter your website" required #website="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="companyname">Company Name</label>
+        <input type="text" [(ngModel)]="user.company.name" class="form-control" id="companyname" name="companyname"
+          placeholder="Enter your company name" required #companyname="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="companycatchphrase">Company Catch Phrase</label>
+        <input type="text" [(ngModel)]="user.company.catchPhrase" class="form-control" id="catchphrase"
+          name="catchphrase" placeholder="Enter your catch phrase" required #companycatchphrase="ngModel">
+      </div>
+      <div class="form-group">
+          <label for="companybs">Company BS</label>
+          <input type="text" [(ngModel)]="user.company.bs" class="form-control" id="bs"
+            name="bs" placeholder="Enter your BS" required #companybs="ngModel">
+        </div>
+      <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-info" (click)="delete()">Delete</button>
+    </form>
+  </div>
+</div>
